@@ -13,7 +13,7 @@ class Interpreter:
         try:
             ast = self.parser(lexer)
             self.write_dot(ast.dot())
-            # subprocess.call("dot -Tpng ast.dot -o ast.png")
+            subprocess.call("dot -Tpng ast.dot -o ast.png")
             value = ast.eval()
             if value is None:
                 return None

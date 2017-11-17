@@ -6,3 +6,8 @@ Compiler Construction course project: interactive shell that handles simple math
 - Run with `python -m rafmath.main`
 
 ![Screenshot](/screenshot.png "Screenshot")
+
+- Parser generates `dot` representation of the `AST`:
+
+![AST](/ast_example.png "AST")
+
