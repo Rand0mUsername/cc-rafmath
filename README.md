@@ -9,5 +9,5 @@ Compiler Construction course project: interactive shell that handles simple math
 
 - Parser generates `dot` representation of the `AST` that can be visualized using `GraphViz`:
 
-![AST](/ast_example.png "AST")
+![AST](/example_ast.png "AST")
 
