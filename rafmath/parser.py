@@ -24,6 +24,8 @@ class Parser:
         else:
             aexp1, token = self.parse_aexp1(first_token)
             if token.type == TokenType.ASS:
+                if type(aexp1) != VarNumArithmeticExpNode:
+                    raise Exception("Can only assign to variables")
                 self.assert_token_type(first_token, TokenType.ID)
                 token = next(self.token_generator)
                 aexp1, token = self.parse_aexp1(token)

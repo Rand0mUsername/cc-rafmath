@@ -1,10 +1,14 @@
 stmt ::= ID ASS aExp1 | aExp1 | bExp | EXIT
+
 bExp ::= aExp1 (bOp aExp1)+
 bOp ::= OP_GT | OP_LT | OP_GE | OP_LE | OP_EQ
+
 aExp1 ::= aExp2 (aOp1 aExp1)+ | aExp2
 aOp1 ::= OP_ADD | OP_SUB
+
 aExp2 ::= aExp3 (aOp2 aExp2)+ | aExp3
 aOp2 ::= OP_MUL | OP_DIV
+
 aExp3 ::= mathFn aExpParen | aExpParen | num | OP_SUB num
 mathFn ::= MATH_SIN | MATH_COS | MATH_TAN | MATH_CTG | MATH_SQRT | MATH_POW | MATH_LOG
 aExpParen ::= PAREN_L aExp1 PAREN_R
